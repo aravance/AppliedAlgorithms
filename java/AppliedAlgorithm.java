@@ -7,6 +7,7 @@ import java.util.Scanner;
 public abstract class AppliedAlgorithm {
 
     static Class[] ALGORITHMS = new Class[] {
+        Surjections.class,
     };
 
     public static void main(String[] args) {
