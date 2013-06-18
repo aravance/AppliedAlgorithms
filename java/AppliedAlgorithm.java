@@ -8,6 +8,7 @@ public abstract class AppliedAlgorithm {
 
     static Class[] ALGORITHMS = new Class[] {
         Surjections.class,
+        Cribbage.class,
     };
 
     public static void main(String[] args) {
