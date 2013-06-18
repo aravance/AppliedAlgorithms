@@ -1,0 +1,21 @@
+x = 4
+PRINT(x)
+z = x + y
+PRINT(z)
+z : y
+y = x + x
+z = x + y + y - y
+PRINT(z)
+PRINT(y)
+PRINT (X)
+PRINT (x)
+x = x
+y =
+w = 9
+y = 9
+y = y + x - z - z
+x = x + x - x - x - x
+PRINT(x)
+PRINT(y)
+PRINT(z)
+HALT

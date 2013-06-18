@@ -1,0 +1,15 @@
+S 2 2 2  accept
+S 1 2 2 2  accept
+S 1 2 3 4 4 4 4 4 4  accept
+S 2 3 4 4 4 4 4 4 5 6 7 7 7  accept
+S 2 2 2 2 2 2 5  reject
+S 2 2 2 2 2 2 5 6  reject
+S 1 2 2 3 4 5 7  accept
+S 2  accept
+S 2 3  reject
+S 1 2 2 2  accept
+S 2 3 4 4  accept
+S  reject
+S  reject
+S 1  reject
+S 1  reject

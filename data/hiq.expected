@@ -1,0 +1,256 @@
+    1 2 3 
+    4 5 6 
+7 8 9 A B C D 
+E F G 0 I J K 
+L M N P Q R S 
+    T U V 
+    W X Y 
+
+    1 2 3 
+    4 0 6 
+7 8 9 0 B C D 
+E F G 5 I J K 
+L M N P Q R S 
+    T U V 
+    W X Y 
+
+    1 2 3 
+    4 0 6 
+7 0 0 8 B C D 
+E F G 5 I J K 
+L M N P Q R S 
+    T U V 
+    W X Y 
+
+    0 2 3 
+    0 0 6 
+7 0 1 8 B C D 
+E F G 5 I J K 
+L M N P Q R S 
+    T U V 
+    W X Y 
+
+    3 0 0 
+    0 0 6 
+7 0 1 8 B C D 
+E F G 5 I J K 
+L M N P Q R S 
+    T U V 
+    W X Y 
+
+    3 0 0 
+    0 0 6 
+7 8 0 0 B C D 
+E F G 5 I J K 
+L M N P Q R S 
+    T U V 
+    W X Y 
+
+    3 0 0 
+    0 0 6 
+0 0 7 0 B C D 
+E F G 5 I J K 
+L M N P Q R S 
+    T U V 
+    W X Y 
+
+    3 0 B 
+    0 0 0 
+0 0 7 0 0 C D 
+E F G 5 I J K 
+L M N P Q R S 
+    T U V 
+    W X Y 
+
+    3 0 B 
+    0 0 0 
+0 0 7 0 D 0 0 
+E F G 5 I J K 
+L M N P Q R S 
+    T U V 
+    W X Y 
+
+    3 0 B 
+    G 0 0 
+0 0 0 0 D 0 0 
+E F 0 5 I J K 
+L M N P Q R S 
+    T U V 
+    W X Y 
+
+    0 0 B 
+    0 0 0 
+0 0 3 0 D 0 0 
+E F 0 5 I J K 
+L M N P Q R S 
+    T U V 
+    W X Y 
+
+    0 0 B 
+    0 0 0 
+0 0 3 0 D 0 0 
+0 0 E 5 I J K 
+L M N P Q R S 
+    T U V 
+    W X Y 
+
+    0 0 B 
+    E 0 0 
+0 0 0 0 D 0 0 
+0 0 0 5 I J K 
+L M N P Q R S 
+    T U V 
+    W X Y 
+
+    0 0 B 
+    E 0 I 
+0 0 0 0 0 0 0 
+0 0 0 5 0 J K 
+L M N P Q R S 
+    T U V 
+    W X Y 
+
+    0 0 0 
+    E 0 0 
+0 0 0 0 B 0 0 
+0 0 0 5 0 J K 
+L M N P Q R S 
+    T U V 
+    W X Y 
+
+    0 0 0 
+    E 0 0 
+0 0 0 0 B 0 0 
+0 0 0 5 K 0 0 
+L M N P Q R S 
+    T U V 
+    W X Y 
+
+    0 0 0 
+    E 0 K 
+0 0 0 0 0 0 0 
+0 0 0 5 0 0 0 
+L M N P Q R S 
+    T U V 
+    W X Y 
+
+    0 0 0 
+    E 0 K 
+0 0 0 0 0 0 0 
+0 0 T 5 0 0 0 
+L M 0 P Q R S 
+    0 U V 
+    W X Y 
+
+    0 0 0 
+    E 0 K 
+0 0 0 0 0 0 0 
+0 0 T 5 0 0 0 
+0 0 L P Q R S 
+    0 U V 
+    W X Y 
+
+    0 0 0 
+    E 0 K 
+0 0 L 0 0 0 0 
+0 0 0 5 0 0 0 
+0 0 0 P Q R S 
+    0 U V 
+    W X Y 
+
+    0 0 0 
+    0 0 K 
+0 0 0 0 0 0 0 
+0 0 E 5 0 0 0 
+0 0 0 P Q R S 
+    0 U V 
+    W X Y 
+
+    0 0 0 
+    0 0 K 
+0 0 0 0 0 0 0 
+0 0 0 0 E 0 0 
+0 0 0 P Q R S 
+    0 U V 
+    W X Y 
+
+    0 0 0 
+    0 0 K 
+0 0 0 0 Q 0 0 
+0 0 0 0 0 0 0 
+0 0 0 P 0 R S 
+    0 U V 
+    W X Y 
+
+    0 0 0 
+    0 0 0 
+0 0 0 0 0 0 0 
+0 0 0 0 K 0 0 
+0 0 0 P 0 R S 
+    0 U V 
+    W X Y 
+
+    0 0 0 
+    0 0 0 
+0 0 0 0 0 0 0 
+0 0 0 0 K 0 0 
+0 0 0 P S 0 0 
+    0 U V 
+    W X Y 
+
+    0 0 0 
+    0 0 0 
+0 0 0 0 0 0 0 
+0 0 0 0 K 0 0 
+0 0 0 0 0 P 0 
+    0 U V 
+    W X Y 
+
+    0 0 0 
+    0 0 0 
+0 0 0 0 0 0 0 
+0 0 0 0 K 0 0 
+0 0 0 0 Y P 0 
+    0 U 0 
+    W X 0 
+
+    0 0 0 
+    0 0 0 
+0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 
+0 0 0 0 0 P 0 
+    0 U K 
+    W X 0 
+
+    0 0 0 
+    0 0 0 
+0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 
+0 0 0 0 0 P 0 
+    0 U K 
+    0 0 W 
+
+    0 0 0 
+    0 0 0 
+0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 
+0 0 0 0 W P 0 
+    0 U 0 
+    0 0 0 
+
+    0 0 0 
+    0 0 0 
+0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 
+0 0 0 P 0 0 0 
+    0 U 0 
+    0 0 0 
+
+    0 0 0 
+    0 0 0 
+0 0 0 0 0 0 0 
+0 0 0 U 0 0 0 
+0 0 0 0 0 0 0 
+    0 0 0 
+    0 0 0 
+

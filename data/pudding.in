@@ -1,0 +1,128 @@
+( F )
+( F implies G )
+-
+( G )
+( rain implies wetSidewalk )
+( snow implies noSchool )
+( noSchool implies happyStudents )
+( snow )
+end
+
+( F implies G )
+( not G )
+-
+( not F )
+( rain implies wetSidewalk )
+( rain )
+( not snow )
+end
+
+( A or B )
+( not A )
+-
+( B )
+( right or wrong )
+( black or white )
+( not white )
+( not right )
+( right or left )
+( not rain )
+end
+
+( A )
+( B )
+-
+( A to B )
+( oranges )
+( apples )
+end
+
+( Apple implies Banana )
+( Apple )
+-
+( Banana )
+( rain implies wetSidewalk )
+( sprinkler implies wetSidewalk )
+( spilledDrink implies wetSidewalk )
+( end implies noMore )
+( rain )
+( sprinkler )
+( spilledDrink )
+( end )
+end
+
+( A B C )
+( A C A )
+( C A B )
+-
+( A B C )
+( a b c )
+( p r p )
+( z x y )
+( a b a )
+( p q r )
+( x z x )
+( r p q )
+( c a b )
+( x y z )
+end
+
+( X )
+-
+( X )
+( a )
+( a b )
+( a b c )
+( d )
+end
+
+( A )
+( B )
+( apples )
+-
+( whoopee )
+( apples )
+( oranges )
+( bananas )
+end
+
+( A )
+( B )
+( C )
+( D )
+-
+( A B C D )
+( d )
+( e )
+( f )
+( g )
+( h )
+( i )
+( j )
+( k )
+( l )
+( m )
+end
+
+( ThisLongVariableName thisLongerSymbolName )
+-
+( ThisLongVariableName )
+( ok thisLongerSymbolName )
+end
+
+( A symbol1 symbol2 symbol3 symbol4 symbol5 B symbol1 symbol2 symbol3 symbol4 symbol5 C  symbol1 symbol2 symbol3 symbol4 symbol5 C symbol1 symbol2 symbol3 symbol4 symbol5 D )
+-
+( ok )
+( ccsc symbol1 symbol2 symbol3 symbol4 symbol5 ccsc symbol1 symbol2 symbol3 symbol4 symbol5 ccsc  symbol1 symbol2 symbol3 symbol4 symbol5 ccsc symbol1 symbol2 symbol3 symbol4 symbol5 ccsc )
+end
+
+( A A B B )
+-
+( one A and one B is enough )
+( boy boy girl girl )
+( dog dog cat cat )
+( boy dog girl cat )
+end
+
+end
+

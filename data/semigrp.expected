@@ -1,0 +1,317 @@
+S = {a,b,c,d}
+ #|abcd
+ -+----
+ a|aaaa
+ b|abbd
+ c|accd
+ d|dddd
+
+SEMIGROUP BUT NOT COMMUTATIVE (a#d IS NOT EQUAL TO d#a)
+------------------------------
+
+S = {a,b,c}
+ #|abc
+ -+---
+ a|abc
+ b|bca
+ c|cab
+
+COMMUTATIVE SEMIGROUP
+------------------------------
+
+S = {a,b,c}
+ #|abc
+ -+---
+ a|abc
+ b|bca
+ c|cad
+
+NOT A SEMIGROUP: c#c = d WHICH IS NOT AN ELEMENT OF THE SET
+------------------------------
+
+S = {a,b,c,d}
+ #|abcd
+ -+----
+ a|aaaa
+ b|bbbb
+ c|aaaa
+ d|bbbb
+
+SEMIGROUP BUT NOT COMMUTATIVE (a#b IS NOT EQUAL TO b#a)
+------------------------------
+
+S = {a,b,c,d}
+ #|abcd
+ -+----
+ a|aaaa
+ b|abca
+ c|acba
+ d|aaad
+
+COMMUTATIVE SEMIGROUP
+------------------------------
+
+S = {a,c,d,b}
+ #|acdb
+ -+----
+ a|aaaa
+ c|aaca
+ d|aada
+ b|aaab
+
+SEMIGROUP BUT NOT COMMUTATIVE (c#d IS NOT EQUAL TO d#c)
+------------------------------
+
+S = {a,b,c,d}
+ #|abcd
+ -+----
+ a|aaaa
+ b|bbbb
+ c|cccc
+ d|dddd
+
+SEMIGROUP BUT NOT COMMUTATIVE (a#b IS NOT EQUAL TO b#a)
+------------------------------
+
+S = {a,b,c,d,e}
+ #|abcde
+ -+-----
+ a|aaaaa
+ b|bbbbb
+ c|ccccc
+ d|ddddd
+ e|eeeee
+
+SEMIGROUP BUT NOT COMMUTATIVE (a#b IS NOT EQUAL TO b#a)
+------------------------------
+
+S = {a,b,c,d,e}
+ #|abcde
+ -+-----
+ a|abcde
+ b|abcde
+ c|abcde
+ d|abcde
+ e|abcde
+
+SEMIGROUP BUT NOT COMMUTATIVE (a#b IS NOT EQUAL TO b#a)
+------------------------------
+
+S = {a,b,c,d,e}
+ #|abcde
+ -+-----
+ a|aaaaa
+ b|bbabb
+ c|cccbc
+ d|ddddd
+ e|eeeee
+
+NOT A SEMIGROUP: (b#a)#c IS NOT EQUAL TO b#(a#c)
+------------------------------
+
+S = {a,b,c,d,e}
+ #|abcde
+ -+-----
+ a|abcde
+ b|bcdea
+ c|cdeab
+ d|deabc
+ e|eabcd
+
+COMMUTATIVE SEMIGROUP
+------------------------------
+
+S = {a,b,c,d,e}
+ #|abcde
+ -+-----
+ a|abcde
+ b|eabcd
+ c|deabc
+ d|cdeab
+ e|bcdea
+
+NOT A SEMIGROUP: (b#a)#a IS NOT EQUAL TO b#(a#a)
+------------------------------
+
+S = {e,d,c,b,a}
+ #|edcba
+ -+-----
+ e|eeeee
+ d|ddddd
+ c|ccccc
+ b|bbbbb
+ a|aaaaa
+
+SEMIGROUP BUT NOT COMMUTATIVE (e#d IS NOT EQUAL TO d#e)
+------------------------------
+
+S = {e,d,c,b,a}
+ #|edcba
+ -+-----
+ e|edcba
+ d|edcba
+ c|edcba
+ b|edcba
+ a|edcba
+
+SEMIGROUP BUT NOT COMMUTATIVE (e#d IS NOT EQUAL TO d#e)
+------------------------------
+
+S = {e,d,c,b,a}
+ #|edcba
+ -+-----
+ e|eeeee
+ d|eeeee
+ c|eeeee
+ b|eeeee
+ a|eeeee
+
+COMMUTATIVE SEMIGROUP
+------------------------------
+
+S = {e,d,c,b,a}
+ #|edcba
+ -+-----
+ e|eeeee
+ d|aeeee
+ c|eeeee
+ b|eeeee
+ a|eeeee
+
+NOT A SEMIGROUP: (d#e)#e IS NOT EQUAL TO d#(e#e)
+------------------------------
+
+S = {a,b,c,d,e,f,g,h,i,j}
+ #|abcdefghij
+ -+----------
+ a|aaaaaaaaaa
+ b|bbbbbbbbbb
+ c|cccccccccc
+ d|dddddddddd
+ e|eeeeeeeeee
+ f|ffffffffff
+ g|gggggggggg
+ h|hhhhhhhhhh
+ i|iiiiiiiiii
+ j|jjjjjjjjjj
+
+SEMIGROUP BUT NOT COMMUTATIVE (a#b IS NOT EQUAL TO b#a)
+------------------------------
+
+S = {a,b,c,d,e,f,g,h,i,j}
+ #|abcdefghij
+ -+----------
+ a|abcdefghij
+ b|abcdefghij
+ c|abcdefghij
+ d|abcdefghij
+ e|abcdefghij
+ f|abcdefghij
+ g|abcdefghij
+ h|abcdefghij
+ i|abcdefghij
+ j|abcdefghij
+
+SEMIGROUP BUT NOT COMMUTATIVE (a#b IS NOT EQUAL TO b#a)
+------------------------------
+
+S = {a,b,c,d,e,f,g,h,i,j}
+ #|abcdefghij
+ -+----------
+ a|abcdefghij
+ b|bcdefghija
+ c|cdefghijab
+ d|defghijabc
+ e|efghijabcd
+ f|fghijabcde
+ g|ghijabcdef
+ h|hijabcdefg
+ i|ijabcdefgh
+ j|jabcdefghi
+
+COMMUTATIVE SEMIGROUP
+------------------------------
+
+S = {a,b,c,d,e,f,g,h,i,j}
+ #|abcdefghij
+ -+----------
+ a|abcdefghij
+ b|bcdefghija
+ c|cdefghijab
+ d|defghijabc
+ e|efghljabcd
+ f|fghijabcde
+ g|ghijabcdef
+ h|hijabcdefg
+ i|ijabcdefgh
+ j|jabcdefghi
+
+NOT A SEMIGROUP: e#e = l WHICH IS NOT AN ELEMENT OF THE SET
+------------------------------
+
+S = {a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z}
+ #|abcdefghijklmnopqrstuvwxyz
+ -+--------------------------
+ a|abcdefghijklmnopqrstuvwxyz
+ b|bcdefghijklmnopqrstuvwxyza
+ c|cdefghijklmnopqrstuvwxyzab
+ d|defghijklmnopqrstuvwxyzabc
+ e|efghijklmnopqrstuvwxyzabcd
+ f|fghijklmnopqrstuvwxyzabcde
+ g|ghijklmnopqrstuvwxyzabcdef
+ h|hijklmnopqrstuvwxyzabcdefg
+ i|ijklmnopqrstuvwxyzabcdefgh
+ j|jklmnopqrstuvwxyzabcdefghi
+ k|klmnopqrstuvwxyzabcdefghij
+ l|lmnopqrstuvwxyzabcdefghijk
+ m|mnopqrstuvwxyzabcdefghijkl
+ n|nopqrstuvwxyzabcdefghijklm
+ o|opqrstuvwxyzabcdefghijklmn
+ p|pqrstuvwxyzabcdefghijklmno
+ q|qrstuvwxyzabcdefghijklmnop
+ r|rstuvwxyzabcdefghijklmnopq
+ s|stuvwxyzabcdefghijklmnopqr
+ t|tuvwxyzabcdefghijklmnopqrs
+ u|uvwxyzabcdefghijklmnopqrst
+ v|vwxyzabcdefghijklmnopqrstu
+ w|wxyzabcdefghijklmnopqrstuv
+ x|xyzabcdefghijklmnopqrstuvw
+ y|yzabcdefghijklmnopqrstuvwx
+ z|zabcdefghijklmnopqrstuvwxy
+
+COMMUTATIVE SEMIGROUP
+------------------------------
+
+S = {a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z}
+ #|abcdefghijklmnopqrstuvwxyz
+ -+--------------------------
+ a|abcdefghijklmnopqrstuvwxyz
+ b|bcdefghijklmnopqrstuvwxyza
+ c|cdefghijklmnopqrstuvwxyzab
+ d|defghijklmnopqrstuvwxyzabc
+ e|efghijklmnopqrstuvwxyzabcd
+ f|fghijklmnopqrstuvwxyzabcde
+ g|ghijklmnopqrstuvwxyzabcdef
+ h|hijklmnopqrstuvwxyzabcdefg
+ i|ijklmnopqrstuvwxyzabcdefgh
+ j|jklmnopqrstuvwxyzabcdefghi
+ k|klmnopqrstuvwxyzabcdefghij
+ l|lmnopqrstuvwxyzabcdefghijk
+ m|mnopqrstuvwxyzabcdefghijkl
+ n|nopqrstuvwxyzabcdefghijklm
+ o|opqrstuvwxyzabcdefghijklmn
+ p|pqrstuvwxyzabcdefghijklmno
+ q|qrstuvwxyzabcdefghijklmnop
+ r|rstuvwxyzabcdefghijklmnopq
+ s|stuvwxyzabcdefghikjlmnopqr
+ t|tuvwxyzabcdefghijklmnopqrs
+ u|uvwxyzabcdefghijklmnopqrst
+ v|vwxyzabcdefghijklmnopqrstu
+ w|wxyzabcdefghijklmnopqrstuv
+ x|xyzabcdefghijklmnopqrstuvw
+ y|yzabcdefghijklmnopqrstuvwx
+ z|zabcdefghijklmnopqrstuvwxy
+
+NOT A SEMIGROUP: (b#r)#r IS NOT EQUAL TO b#(r#r)
+------------------------------
+

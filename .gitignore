@@ -4,3 +4,6 @@
 *.jar
 *.war
 *.ear
+
+# output files
+data/*.out
