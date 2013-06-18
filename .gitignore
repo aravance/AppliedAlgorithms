@@ -7,3 +7,7 @@
 
 # output files
 data/*.out
+
+# IntelliJ
+.idea
+*.iml
