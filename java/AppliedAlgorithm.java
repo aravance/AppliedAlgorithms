@@ -12,6 +12,7 @@ public abstract class AppliedAlgorithm {
         Mayan.class,
         Sched.class,
         Anagrams.class,
+        Subvector.class,
     };
 
     public static void main(String[] args) {
