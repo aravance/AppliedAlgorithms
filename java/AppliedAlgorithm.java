@@ -10,6 +10,7 @@ public abstract class AppliedAlgorithm {
         Surjections.class,
         Cribbage.class,
         Mayan.class,
+        Sched.class,
     };
 
     public static void main(String[] args) {
