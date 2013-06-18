@@ -11,6 +11,7 @@ public abstract class AppliedAlgorithm {
         Cribbage.class,
         Mayan.class,
         Sched.class,
+        Anagrams.class,
     };
 
     public static void main(String[] args) {
