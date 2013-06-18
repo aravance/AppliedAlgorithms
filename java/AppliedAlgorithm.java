@@ -14,6 +14,7 @@ public abstract class AppliedAlgorithm {
         Anagrams.class,
         Subvector.class,
         Cyclic.class,
+        Semigrp.class,
     };
 
     public static void main(String[] args) {
