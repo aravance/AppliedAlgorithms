@@ -64,11 +64,8 @@ public abstract class AppliedAlgorithm {
         try (Scanner out = new Scanner(new FileInputStream(OUTFILE));
              Scanner expect = new Scanner(new FileInputStream(EXPECTFILE))) {
             while (success && (out.hasNextLine() || expect.hasNextLine())) {
-                if (out.hasNextLine() && expect.hasNextLine()) {
-                    success = out.nextLine().equals(expect.nextLine());
-                } else {
-                    success = false;
-                }
+                success = out.hasNextLine() && expect.hasNextLine() &&
+                        out.nextLine().equals(expect.nextLine());
             }
         } catch (FileNotFoundException e) {
             success = false;
