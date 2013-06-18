@@ -13,6 +13,7 @@ public abstract class AppliedAlgorithm {
         Sched.class,
         Anagrams.class,
         Subvector.class,
+        Cyclic.class,
     };
 
     public static void main(String[] args) {
