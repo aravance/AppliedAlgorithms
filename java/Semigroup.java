@@ -3,7 +3,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class Semigrp extends AppliedAlgorithm {
+public class Semigroup extends AppliedAlgorithm {
 
     private static String repeat(char c, int n) {
         return n <= 0 ?
@@ -98,5 +98,10 @@ public class Semigrp extends AppliedAlgorithm {
             out.println(repeat('-', 30));
             out.println();
         }
+    }
+
+    @Override
+    protected String getFileNameBase() {
+        return "semigrp";
     }
 }

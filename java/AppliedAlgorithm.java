@@ -6,32 +6,36 @@ import java.util.Scanner;
 
 public abstract class AppliedAlgorithm {
 
-    static Class[] ALGORITHMS = new Class[] {
-        Surjections.class,
-        Cribbage.class,
-        Mayan.class,
-        Sched.class,
-        Anagrams.class,
-        Subvector.class,
-        Cyclic.class,
-        Semigrp.class,
+    static Class[] ALGORITHMS = new Class[]{
+            Surjections.class,
+            Cribbage.class,
+            Mayan.class,
+            Schedule.class,
+            Anagrams.class,
+            Subvector.class,
+            Cyclic.class,
+            Semigroup.class,
     };
 
     public static void main(String[] args) {
-        for (Class algorithm : ALGORITHMS) {
+        for (Class clazz : ALGORITHMS) {
+            final String name = clazz.getName();
 
-            final String name = algorithm.getName();
-            final String INFILE = name.toLowerCase() + ".in";
-            final String OUTFILE = name.toLowerCase() + ".out";
+            final AppliedAlgorithm algorithm;
+            try {
+                algorithm = (AppliedAlgorithm) clazz.newInstance();
+            } catch (InstantiationException | IllegalAccessException e) {
+                System.out.println("Could not instantiate " + name + " for testing");
+                continue;
+            }
 
-            try (Scanner in = new Scanner(new FileInputStream(INFILE));
-                 PrintStream out = new PrintStream(new FileOutputStream(OUTFILE))) {
+            try (Scanner in = new Scanner(new FileInputStream(algorithm.getInFile()));
+                 PrintStream out = new PrintStream(new FileOutputStream(algorithm.getOutFile()))) {
 
-                final AppliedAlgorithm instance = (AppliedAlgorithm) algorithm.newInstance();
                 Thread t = new Thread() {
                     @Override
                     public void run() {
-                        instance.execute(in, out);
+                        algorithm.execute(in, out);
                     }
                 };
                 t.start();
@@ -44,25 +48,19 @@ public abstract class AppliedAlgorithm {
                 out.flush();
                 out.close();
 
-                System.out.println(name + ": " + (testAlgorithm(algorithm) ? "success" : "failure"));
-            } catch (FileNotFoundException |
-                    InterruptedException |
-                    InstantiationException |
-                    IllegalAccessException e) {
+                System.out.println(name + ": " + (testOutput(algorithm) ? "success" : "failure"));
+            } catch (FileNotFoundException | InterruptedException e) {
                 System.out.println(name + ": error: " + e.getMessage());
             }
         }
     }
 
-    private static boolean testAlgorithm(Class algorithm) {
+    private static boolean testOutput(AppliedAlgorithm algorithm) {
 
-        final String name = algorithm.getName();
-        final String OUTFILE = name.toLowerCase() + ".out";
-        final String EXPECTFILE = name.toLowerCase() + ".expected";
         boolean success = true;
 
-        try (Scanner out = new Scanner(new FileInputStream(OUTFILE));
-             Scanner expect = new Scanner(new FileInputStream(EXPECTFILE))) {
+        try (Scanner out = new Scanner(new FileInputStream(algorithm.getOutFile()));
+             Scanner expect = new Scanner(new FileInputStream(algorithm.getExpectedFile()))) {
             while (success && (out.hasNextLine() || expect.hasNextLine())) {
                 success = out.hasNextLine() && expect.hasNextLine() &&
                         out.nextLine().equals(expect.nextLine());
@@ -71,6 +69,22 @@ public abstract class AppliedAlgorithm {
             success = false;
         }
         return success;
+    }
+
+    protected String getFileNameBase() {
+        return getClass().getName().toLowerCase();
+    }
+
+    private String getInFile() {
+        return getFileNameBase() + ".in";
+    }
+
+    private String getOutFile() {
+        return getFileNameBase() + ".out";
+    }
+
+    private String getExpectedFile() {
+        return getFileNameBase() + ".expected";
     }
 
     abstract void execute(Scanner in, PrintStream out);

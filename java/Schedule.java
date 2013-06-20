@@ -1,7 +1,7 @@
 import java.io.PrintStream;
 import java.util.*;
 
-public class Sched extends AppliedAlgorithm {
+public class Schedule extends AppliedAlgorithm {
 
     private int computeProfit(Collection<Order> orders) {
         int profit = 0;
@@ -28,6 +28,11 @@ public class Sched extends AppliedAlgorithm {
             }
             out.println(computeProfit(orders));
         }
+    }
+
+    @Override
+    protected String getFileNameBase() {
+        return "sched";
     }
 }
 
