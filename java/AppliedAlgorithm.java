@@ -15,6 +15,7 @@ public abstract class AppliedAlgorithm {
             Subvector.class,
             Cyclic.class,
             Semigroup.class,
+            Pills.class,
     };
 
     public static void main(String[] args) {
