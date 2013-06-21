@@ -21,6 +21,7 @@ public abstract class AppliedAlgorithm {
             Pills.class,
             Image.class,
             Espanol.class,
+            Barcode.class,
     };
 
     public static void main(String[] args) {
