@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public abstract class AppliedAlgorithm {
 
-    public static final int TIME_LIMIT = Integer.MAX_VALUE;//60 * 1000;
+    public static final int TIME_LIMIT = 60 * 1000;
     static Class[] ALGORITHMS = new Class[]{
             Surjections.class,
             Cribbage.class,
