@@ -18,6 +18,7 @@ public abstract class AppliedAlgorithm {
             Semigroup.class,
             Pills.class,
             Image.class,
+            Espanol.class,
     };
 
     public static void main(String[] args) {
