@@ -1,5 +1,7 @@
 package com.radadev.applied;
 
+import com.radadev.applied.utility.SetBuilder;
+
 import java.io.PrintStream;
 import java.util.*;
 
@@ -21,16 +23,13 @@ public class Espanol extends AppliedAlgorithm {
 
 class EspanolComparator implements Comparator<String> {
 
-    private static final Set<String> PAIRS;
-
-    static {
-        Set<String> pairs = new TreeSet<>();
-        pairs.add("ch");
-        pairs.add("ll");
-        pairs.add("n~");
-        pairs.add("rr");
-        PAIRS = Collections.unmodifiableSet(pairs);
-    }
+    private static final Set<String> PAIRS =
+            SetBuilder.newBuilder(new TreeSet<String>())
+                    .with("ch")
+                    .with("ll")
+                    .with("n~")
+                    .with("rr")
+                    .buildUnmodifiable();
 
     @Override
     public int compare(String o1, String o2) {
