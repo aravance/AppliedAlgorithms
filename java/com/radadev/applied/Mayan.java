@@ -1,3 +1,5 @@
+package  com.radadev.applied;
+
 import java.io.ByteArrayInputStream;
 import java.io.PrintStream;
 import java.util.Scanner;

@@ -1,3 +1,5 @@
+package  com.radadev.applied;
+
 import java.io.*;
 import java.util.Scanner;
 

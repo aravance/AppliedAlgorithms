@@ -1,5 +1,10 @@
+package com.radadev.applied;
+
 import java.io.PrintStream;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
 
 public class Anagrams extends AppliedAlgorithm {
 

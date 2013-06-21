@@ -1,3 +1,5 @@
+package com.radadev.applied;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -23,7 +25,7 @@ public abstract class AppliedAlgorithm {
 
     public static void main(String[] args) {
         for (Class clazz : ALGORITHMS) {
-            final String name = clazz.getName();
+            final String name = clazz.getSimpleName();
 
             final AppliedAlgorithm algorithm;
             try {
@@ -76,7 +78,7 @@ public abstract class AppliedAlgorithm {
     }
 
     protected String getFileNameBase() {
-        return getClass().getName().toLowerCase();
+        return getClass().getSimpleName().toLowerCase();
     }
 
     private String getInFile() {

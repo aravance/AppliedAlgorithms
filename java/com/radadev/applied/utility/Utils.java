@@ -1,3 +1,5 @@
+package com.radadev.applied.utility;
+
 public class Utils {
 
     private Utils() {

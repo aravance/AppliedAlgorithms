@@ -1,3 +1,7 @@
+package  com.radadev.applied;
+
+import com.radadev.applied.utility.Utils;
+
 import java.io.PrintStream;
 import java.math.BigInteger;
 import java.util.Scanner;
