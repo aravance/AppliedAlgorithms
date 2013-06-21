@@ -5,12 +5,6 @@ import java.util.Scanner;
 
 public class Semigroup extends AppliedAlgorithm {
 
-    private static String repeat(char c, int n) {
-        return n <= 0 ?
-                "" :
-                String.format(String.format("%%0%dd", n), 0).replaceAll("0", Character.toString(c));
-    }
-
     private static String toSetString(char[] set) {
         StringBuilder builder = new StringBuilder("S = {");
         if (set.length > 0) builder.append(set[0]);
@@ -22,7 +16,7 @@ public class Semigroup extends AppliedAlgorithm {
 
     private static void printCayleyTable(PrintStream out, char[] set, Map<Character, Map<Character, Character>> cayley) {
         out.println(" #|" + new String(set));
-        out.println(" -+" + repeat('-', set.length));
+        out.println(" -+" + Utils.repeat("-", set.length));
         for (char first : set) {
             out.print(" " + first + "|");
             for (char second : set) {
@@ -95,7 +89,7 @@ public class Semigroup extends AppliedAlgorithm {
             printCayleyTable(out, set, cayley);
             out.println();
             out.println(evaluateGroup(set, cayley));
-            out.println(repeat('-', 30));
+            out.println(Utils.repeat("-", 30));
             out.println();
         }
     }
