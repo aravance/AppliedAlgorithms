@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public abstract class AppliedAlgorithm {
 
+    public static final int TIME_LIMIT = Integer.MAX_VALUE;//60 * 1000;
     static Class[] ALGORITHMS = new Class[]{
             Surjections.class,
             Cribbage.class,
@@ -16,6 +17,7 @@ public abstract class AppliedAlgorithm {
             Cyclic.class,
             Semigroup.class,
             Pills.class,
+            Image.class,
     };
 
     public static void main(String[] args) {
@@ -40,7 +42,7 @@ public abstract class AppliedAlgorithm {
                     }
                 };
                 t.start();
-                t.join(60 * 1000);
+                t.join(TIME_LIMIT);
                 if (t.isAlive()) {
                     t.interrupt();
                     throw new InterruptedException("time limit exceeded");
