@@ -23,6 +23,7 @@ public abstract class AppliedAlgorithm {
             Espanol.class,
             Barcode.class,
             Plinko.class,
+            Pancakes.class,
     };
 
     public static void main(String[] args) {
