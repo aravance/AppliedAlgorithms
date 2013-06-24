@@ -1,4 +1,4 @@
-package  com.radadev.applied;
+package com.radadev.applied;
 
 import java.io.PrintStream;
 import java.util.*;
@@ -16,7 +16,7 @@ public class Pills extends AppliedAlgorithm {
                 tube.add(c == 'B');
             }
 
-            List<Integer> dead= new ArrayList<>();
+            List<Integer> dead = new ArrayList<>();
             for (int i = 0; i < n; ++i) {
                 tube.add(tube.poll());
                 if (tube.poll()) {

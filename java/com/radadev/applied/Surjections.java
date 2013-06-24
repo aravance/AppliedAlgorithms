@@ -1,6 +1,6 @@
-package  com.radadev.applied;
+package com.radadev.applied;
 
-import java.io.*;
+import java.io.PrintStream;
 import java.util.Scanner;
 
 public class Surjections extends AppliedAlgorithm {

@@ -1,4 +1,4 @@
-package  com.radadev.applied;
+package com.radadev.applied;
 
 import java.io.ByteArrayInputStream;
 import java.io.PrintStream;
@@ -68,9 +68,14 @@ public class Mayan extends AppliedAlgorithm {
             builder.append("#");
             second = fromMayan(builder.toString());
             switch (operator) {
-                case '+': out.println(toMayan(first + second)); break;
-                case '-': out.println(toMayan(first - second)); break;
-                default: throw new UnsupportedOperationException("Unknown operator: " + operator);
+                case '+':
+                    out.println(toMayan(first + second));
+                    break;
+                case '-':
+                    out.println(toMayan(first - second));
+                    break;
+                default:
+                    throw new UnsupportedOperationException("Unknown operator: " + operator);
             }
         }
     }

@@ -1,4 +1,4 @@
-package  com.radadev.applied;
+package com.radadev.applied;
 
 import java.io.PrintStream;
 import java.util.Scanner;

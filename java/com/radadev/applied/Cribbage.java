@@ -1,4 +1,4 @@
-package  com.radadev.applied;
+package com.radadev.applied;
 
 import java.io.PrintStream;
 import java.util.*;
@@ -150,21 +150,35 @@ enum Suit {
 
     public static Suit fromChar(char c) {
         switch (c) {
-            case 'c': case 'C': return Clubs;
-            case 'h': case 'H': return Hearts;
-            case 'd': case 'D': return Diamonds;
-            case 's': case 'S': return Spades;
-            default: return null;
+            case 'c':
+            case 'C':
+                return Clubs;
+            case 'h':
+            case 'H':
+                return Hearts;
+            case 'd':
+            case 'D':
+                return Diamonds;
+            case 's':
+            case 'S':
+                return Spades;
+            default:
+                return null;
         }
     }
 
     public char toChar() {
         switch (this) {
-            case Clubs: return 'C';
-            case Hearts: return 'H';
-            case Diamonds: return 'D';
-            case Spades: return 'S';
-            default: throw new NoSuchElementException("Suit.toChar should never have gotten here");
+            case Clubs:
+                return 'C';
+            case Hearts:
+                return 'H';
+            case Diamonds:
+                return 'D';
+            case Spades:
+                return 'S';
+            default:
+                throw new NoSuchElementException("Suit.toChar should never have gotten here");
         }
     }
 }
@@ -176,20 +190,47 @@ class Card implements Comparable<Card> {
 
     public Card(char value, char suit) {
         switch (value) {
-            case 'A': mValue = 1; break;
-            case '2': mValue = 2; break;
-            case '3': mValue = 3; break;
-            case '4': mValue = 4; break;
-            case '5': mValue = 5; break;
-            case '6': mValue = 6; break;
-            case '7': mValue = 7; break;
-            case '8': mValue = 8; break;
-            case '9': mValue = 9; break;
-            case 'T': mValue = 10; break;
-            case 'J': mValue = 11; break;
-            case 'Q': mValue = 12; break;
-            case 'K': mValue = 13; break;
-            default: throw new IllegalArgumentException("Invalid value: " + value);
+            case 'A':
+                mValue = 1;
+                break;
+            case '2':
+                mValue = 2;
+                break;
+            case '3':
+                mValue = 3;
+                break;
+            case '4':
+                mValue = 4;
+                break;
+            case '5':
+                mValue = 5;
+                break;
+            case '6':
+                mValue = 6;
+                break;
+            case '7':
+                mValue = 7;
+                break;
+            case '8':
+                mValue = 8;
+                break;
+            case '9':
+                mValue = 9;
+                break;
+            case 'T':
+                mValue = 10;
+                break;
+            case 'J':
+                mValue = 11;
+                break;
+            case 'Q':
+                mValue = 12;
+                break;
+            case 'K':
+                mValue = 13;
+                break;
+            default:
+                throw new IllegalArgumentException("Invalid value: " + value);
         }
         mSuit = Suit.fromChar(suit);
     }
@@ -212,12 +253,18 @@ class Card implements Comparable<Card> {
 
     public char getFace() {
         switch (mValue) {
-            case 1: return 'A';
-            case 10: return 'T';
-            case 11: return 'J';
-            case 12: return 'Q';
-            case 13: return 'K';
-            default: return Character.forDigit(mValue, 10);
+            case 1:
+                return 'A';
+            case 10:
+                return 'T';
+            case 11:
+                return 'J';
+            case 12:
+                return 'Q';
+            case 13:
+                return 'K';
+            default:
+                return Character.forDigit(mValue, 10);
         }
     }
 
