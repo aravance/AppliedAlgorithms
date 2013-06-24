@@ -27,6 +27,7 @@ public abstract class AppliedAlgorithm {
             Pudding.class,
             Cake.class,
             Cubes.class,
+            Gopher.class,
     };
 
     @SuppressWarnings("ConstantConditions")
