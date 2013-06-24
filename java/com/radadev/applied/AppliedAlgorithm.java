@@ -24,10 +24,11 @@ public abstract class AppliedAlgorithm {
             Barcode.class,
             Plinko.class,
             Pancakes.class,
-            //Pudding.class,
+            Pudding.class,
             Cake.class,
     };
 
+    @SuppressWarnings("ConstantConditions")
     public static void main(String[] args) {
         for (Class clazz : ALGORITHMS) {
             final String name = clazz.getSimpleName();
