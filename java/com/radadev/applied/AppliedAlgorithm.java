@@ -24,6 +24,8 @@ public abstract class AppliedAlgorithm {
             Barcode.class,
             Plinko.class,
             Pancakes.class,
+            //Pudding.class,
+            Cake.class,
     };
 
     public static void main(String[] args) {
