@@ -35,7 +35,7 @@ public class Pudding extends AppliedAlgorithm {
     }
 
     @Override
-    void execute(Scanner in, PrintStream out) {
+    protected void execute(Scanner in, PrintStream out) {
         int c = 1;
         for (String line = in.nextLine(); !line.equals("end"); line = in.nextLine()) {
 

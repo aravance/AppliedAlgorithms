@@ -102,5 +102,5 @@ public abstract class AppliedAlgorithm {
         return getFileNameBase() + ".expected";
     }
 
-    abstract void execute(Scanner in, PrintStream out);
+    abstract protected void execute(Scanner in, PrintStream out);
 }

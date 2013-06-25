@@ -28,7 +28,7 @@ public class Cyclic extends AppliedAlgorithm {
     }
 
     @Override
-    void execute(Scanner in, PrintStream out) {
+    protected void execute(Scanner in, PrintStream out) {
         for (String line = in.nextLine(); !line.equals("00") && in.hasNextLine(); line = in.nextLine()) {
             out.println(line + (isCyclic(line) ? " is cyclic" : " is not cyclic"));
         }

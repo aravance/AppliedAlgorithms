@@ -16,7 +16,7 @@ public class Subvector extends AppliedAlgorithm {
     }
 
     @Override
-    void execute(Scanner in, PrintStream out) {
+    protected void execute(Scanner in, PrintStream out) {
         ArrayList<Long> array = new ArrayList<>(1000000);
         final int count = in.nextInt();
         for (int i = 0; i < count; ++i) {

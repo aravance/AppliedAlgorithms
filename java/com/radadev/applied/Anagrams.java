@@ -32,7 +32,7 @@ public class Anagrams extends AppliedAlgorithm {
     }
 
     @Override
-    void execute(Scanner in, PrintStream out) {
+    protected void execute(Scanner in, PrintStream out) {
         for (String first = in.nextLine(), second = in.nextLine();
              !END.equals(first) && !END.equals(second);
              first = in.nextLine(), second = in.nextLine()) {

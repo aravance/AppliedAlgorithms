@@ -6,7 +6,7 @@ import java.util.*;
 public class Pills extends AppliedAlgorithm {
 
     @Override
-    void execute(Scanner in, PrintStream out) {
+    protected void execute(Scanner in, PrintStream out) {
         for (int m = in.nextInt(), n = in.nextInt();
              m != 0 && n != 0;
              m = in.nextInt(), n = in.nextInt()) {

@@ -25,7 +25,7 @@ public class Schedule extends AppliedAlgorithm {
     }
 
     @Override
-    void execute(Scanner in, PrintStream out) {
+    protected void execute(Scanner in, PrintStream out) {
         for (int count = in.nextInt(); count != 0; count = in.nextInt()) {
             Collection<Order> orders = new ArrayList<>();
             for (int i = 0; i < count; ++i) {

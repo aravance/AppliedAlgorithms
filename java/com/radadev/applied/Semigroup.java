@@ -76,7 +76,7 @@ public class Semigroup extends AppliedAlgorithm {
     }
 
     @Override
-    void execute(Scanner in, PrintStream out) {
+    protected void execute(Scanner in, PrintStream out) {
         for (int count = in.nextInt(); count != 0; count = in.nextInt()) {
             String line = in.next();
             char[] set = line.toCharArray();

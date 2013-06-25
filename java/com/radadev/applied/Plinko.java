@@ -15,7 +15,7 @@ public class Plinko extends AppliedAlgorithm {
     }
 
     @Override
-    void execute(Scanner in, PrintStream out) {
+    protected void execute(Scanner in, PrintStream out) {
         for (int size = in.nextInt(); size != 0; size = in.nextInt()) {
             int[][] plinko = new int[size][];
             for (int i = 0; i < size; ++i) {

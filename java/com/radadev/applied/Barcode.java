@@ -38,7 +38,7 @@ public class Barcode extends AppliedAlgorithm {
     }
 
     @Override
-    void execute(Scanner in, PrintStream out) {
+    protected void execute(Scanner in, PrintStream out) {
         for (String line = in.nextLine(); !line.equals("0"); line = in.nextLine()) {
             out.println(toBarcode(line));
         }

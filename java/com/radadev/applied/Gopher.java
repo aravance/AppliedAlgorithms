@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class Gopher extends AppliedAlgorithm {
 
     @Override
-    void execute(Scanner in, PrintStream out) {
+    protected void execute(Scanner in, PrintStream out) {
         List<Location> holes = new ArrayList<>(1000);
         for (int c = in.nextInt(); c != 0; c = in.nextInt()) {
 

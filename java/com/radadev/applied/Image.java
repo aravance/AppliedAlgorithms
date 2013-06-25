@@ -94,7 +94,7 @@ public class Image extends AppliedAlgorithm {
     }
 
     @Override
-    void execute(Scanner in, PrintStream out) {
+    protected void execute(Scanner in, PrintStream out) {
         for (int m = in.nextInt(), n = in.nextInt(), x = in.nextInt(), y = in.nextInt(), c = 1;
              m != 0 && n != 0 && x != 0 && y != 0;
              m = in.nextInt(), n = in.nextInt(), x = in.nextInt(), y = in.nextInt(), ++c) {

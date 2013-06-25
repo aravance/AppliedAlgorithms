@@ -14,7 +14,7 @@ import java.util.TreeSet;
 public class Espanol extends AppliedAlgorithm {
 
     @Override
-    void execute(Scanner in, PrintStream out) {
+    protected void execute(Scanner in, PrintStream out) {
         final int n = in.nextInt();
         List<String> words = new LinkedList<>();
         for (int i = 0; i < n; ++i) {

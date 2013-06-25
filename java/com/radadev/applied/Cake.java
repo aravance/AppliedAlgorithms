@@ -29,7 +29,7 @@ public class Cake extends AppliedAlgorithm {
     }
 
     @Override
-    void execute(Scanner in, PrintStream out) {
+    protected void execute(Scanner in, PrintStream out) {
         List<Integer> belt = new ArrayList<>(100000);
         for (int c = in.nextInt(); c != 0; c = in.nextInt()) {
             for (int i = 0; i < c; ++i) {

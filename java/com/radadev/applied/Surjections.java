@@ -39,7 +39,7 @@ public class Surjections extends AppliedAlgorithm {
     }
 
     @Override
-    void execute(Scanner in, PrintStream out) {
+    protected void execute(Scanner in, PrintStream out) {
         for (long m = in.nextLong(), n = in.nextLong();
              m != 0 && n != 0;
              m = in.nextLong(), n = in.nextLong()) {

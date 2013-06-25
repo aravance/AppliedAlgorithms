@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class Convex extends AppliedAlgorithm {
 
     @Override
-    void execute(Scanner in, PrintStream out) {
+    protected void execute(Scanner in, PrintStream out) {
         int n = 1;
         for (int c = in.nextInt(); c != 0; c = in.nextInt()) {
             List<Point> points = new LinkedList<>();
