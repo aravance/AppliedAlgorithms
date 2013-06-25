@@ -1,7 +1,11 @@
 package com.radadev.applied;
 
 import java.io.PrintStream;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Comparator;
+import java.util.PriorityQueue;
+import java.util.Scanner;
 
 public class Schedule extends AppliedAlgorithm {
 
@@ -36,60 +40,60 @@ public class Schedule extends AppliedAlgorithm {
     protected String getFileNameBase() {
         return "sched";
     }
-}
 
-class ProfitOrderComparator implements Comparator<Order> {
+    private static class ProfitOrderComparator implements Comparator<Order> {
 
-    @Override
-    public int compare(Order o1, Order o2) {
-        int value = Integer.compare(o1.getProfit(), o2.getProfit());
-        if (value == 0) value = Integer.compare(o1.getDeadline(), o2.getDeadline());
-        if (value == 0) value = Integer.compare(o1.getId(), o2.getId());
-        return -value;
-    }
-}
-
-class DeadlineOrderComparator implements Comparator<Order> {
-
-    @Override
-    public int compare(Order o1, Order o2) {
-        int value = Integer.compare(o1.getDeadline(), o2.getDeadline());
-        if (value == 0) value = Integer.compare(o1.getProfit(), o2.getProfit());
-        if (value == 0) value = Integer.compare(o1.getId(), o2.getId());
-        return -value;
-    }
-}
-
-class Order {
-
-    private int id;
-    private int deadline;
-    private int profit;
-
-    Order(int id, int deadline, int profit) {
-        this.id = id;
-        this.deadline = deadline;
-        this.profit = profit;
+        @Override
+        public int compare(Order o1, Order o2) {
+            int value = Integer.compare(o1.getProfit(), o2.getProfit());
+            if (value == 0) value = Integer.compare(o1.getDeadline(), o2.getDeadline());
+            if (value == 0) value = Integer.compare(o1.getId(), o2.getId());
+            return -value;
+        }
     }
 
-    int getId() {
-        return id;
+    private static class DeadlineOrderComparator implements Comparator<Order> {
+
+        @Override
+        public int compare(Order o1, Order o2) {
+            int value = Integer.compare(o1.getDeadline(), o2.getDeadline());
+            if (value == 0) value = Integer.compare(o1.getProfit(), o2.getProfit());
+            if (value == 0) value = Integer.compare(o1.getId(), o2.getId());
+            return -value;
+        }
     }
 
-    int getDeadline() {
-        return deadline;
-    }
+    private static class Order {
 
-    int getProfit() {
-        return profit;
-    }
+        private int id;
+        private int deadline;
+        private int profit;
 
-    @Override
-    public String toString() {
-        return "Order{" +
-                "id=" + id +
-                ", deadline=" + deadline +
-                ", profit=" + profit +
-                '}';
+        Order(int id, int deadline, int profit) {
+            this.id = id;
+            this.deadline = deadline;
+            this.profit = profit;
+        }
+
+        int getId() {
+            return id;
+        }
+
+        int getDeadline() {
+            return deadline;
+        }
+
+        int getProfit() {
+            return profit;
+        }
+
+        @Override
+        public String toString() {
+            return "Order{" +
+                    "id=" + id +
+                    ", deadline=" + deadline +
+                    ", profit=" + profit +
+                    '}';
+        }
     }
 }

@@ -37,33 +37,33 @@ public class Cubes extends AppliedAlgorithm {
             out.println("+++");
         }
     }
-}
 
-class CubeSet implements Comparable<CubeSet> {
+    private static class CubeSet implements Comparable<CubeSet> {
 
-    private int a;
-    private int b;
-    private int c;
-    private int d;
+        private int a;
+        private int b;
+        private int c;
+        private int d;
 
-    CubeSet(int a, int b, int c, int d) {
-        this.a = a;
-        this.b = b;
-        this.c = c;
-        this.d = d;
-    }
+        CubeSet(int a, int b, int c, int d) {
+            this.a = a;
+            this.b = b;
+            this.c = c;
+            this.d = d;
+        }
 
-    @Override
-    public String toString() {
-        return a + " = f(" + b + "," + c + "," + d + ")";
-    }
+        @Override
+        public String toString() {
+            return a + " = f(" + b + "," + c + "," + d + ")";
+        }
 
-    @Override
-    public int compareTo(CubeSet o) {
-        int result = Integer.compare(a, o.a);
-        if (result == 0) result = Integer.compare(b, o.b);
-        if (result == 0) result = Integer.compare(c, o.c);
-        if (result == 0) result = Integer.compare(d, o.d);
-        return result;
+        @Override
+        public int compareTo(CubeSet o) {
+            int result = Integer.compare(a, o.a);
+            if (result == 0) result = Integer.compare(b, o.b);
+            if (result == 0) result = Integer.compare(c, o.c);
+            if (result == 0) result = Integer.compare(d, o.d);
+            return result;
+        }
     }
 }

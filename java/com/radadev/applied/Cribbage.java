@@ -1,7 +1,15 @@
 package com.radadev.applied;
 
 import java.io.PrintStream;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.NoSuchElementException;
+import java.util.Scanner;
+import java.util.StringTokenizer;
 
 public class Cribbage extends AppliedAlgorithm {
 
@@ -140,149 +148,102 @@ public class Cribbage extends AppliedAlgorithm {
             out.println(score(hand, starter));
         }
     }
-}
 
-enum Suit {
-    Clubs,
-    Hearts,
-    Diamonds,
-    Spades;
+    private static enum Suit {
+        Clubs,
+        Hearts,
+        Diamonds,
+        Spades;
 
-    public static Suit fromChar(char c) {
-        switch (c) {
-            case 'c':
-            case 'C':
-                return Clubs;
-            case 'h':
-            case 'H':
-                return Hearts;
-            case 'd':
-            case 'D':
-                return Diamonds;
-            case 's':
-            case 'S':
-                return Spades;
-            default:
-                return null;
+        public static Suit fromChar(char c) {
+            switch (c) {
+                case 'c': case 'C': return Clubs;
+                case 'h': case 'H': return Hearts;
+                case 'd': case 'D': return Diamonds;
+                case 's': case 'S': return Spades;
+                default: return null;
+            }
+        }
+
+        public char toChar() {
+            switch (this) {
+                case Clubs: return 'C';
+                case Hearts: return 'H';
+                case Diamonds: return 'D';
+                case Spades: return 'S';
+                default: throw new NoSuchElementException("Suit.toChar should never have gotten here");
+            }
         }
     }
 
-    public char toChar() {
-        switch (this) {
-            case Clubs:
-                return 'C';
-            case Hearts:
-                return 'H';
-            case Diamonds:
-                return 'D';
-            case Spades:
-                return 'S';
-            default:
-                throw new NoSuchElementException("Suit.toChar should never have gotten here");
+    private static class Card implements Comparable<Card> {
+
+        private Suit mSuit;
+        private int mValue;
+
+        public Card(char value, char suit) {
+            switch (value) {
+                case 'A': mValue = 1; break;
+                case '2': mValue = 2; break;
+                case '3': mValue = 3; break;
+                case '4': mValue = 4; break;
+                case '5': mValue = 5; break;
+                case '6': mValue = 6; break;
+                case '7': mValue = 7; break;
+                case '8': mValue = 8; break;
+                case '9': mValue = 9; break;
+                case 'T': mValue = 10; break;
+                case 'J': mValue = 11; break;
+                case 'Q': mValue = 12; break;
+                case 'K': mValue = 13; break;
+                default: throw new IllegalArgumentException("Invalid value: " + value);
+            }
+            mSuit = Suit.fromChar(suit);
         }
-    }
-}
 
-class Card implements Comparable<Card> {
-
-    private Suit mSuit;
-    private int mValue;
-
-    public Card(char value, char suit) {
-        switch (value) {
-            case 'A':
-                mValue = 1;
-                break;
-            case '2':
-                mValue = 2;
-                break;
-            case '3':
-                mValue = 3;
-                break;
-            case '4':
-                mValue = 4;
-                break;
-            case '5':
-                mValue = 5;
-                break;
-            case '6':
-                mValue = 6;
-                break;
-            case '7':
-                mValue = 7;
-                break;
-            case '8':
-                mValue = 8;
-                break;
-            case '9':
-                mValue = 9;
-                break;
-            case 'T':
-                mValue = 10;
-                break;
-            case 'J':
-                mValue = 11;
-                break;
-            case 'Q':
-                mValue = 12;
-                break;
-            case 'K':
-                mValue = 13;
-                break;
-            default:
-                throw new IllegalArgumentException("Invalid value: " + value);
+        static Card fromString(String s) {
+            return new Card(s.charAt(0), s.charAt(1));
         }
-        mSuit = Suit.fromChar(suit);
-    }
 
-    public Suit getSuit() {
-        return mSuit;
-    }
+        public Suit getSuit() {
+            return mSuit;
+        }
 
-    public int getValue() {
-        if (mValue > 10) {
-            return 10;
-        } else {
+        public int getValue() {
+            if (mValue > 10) {
+                return 10;
+            } else {
+                return mValue;
+            }
+        }
+
+        public int getStraightValue() {
             return mValue;
         }
-    }
 
-    public int getStraightValue() {
-        return mValue;
-    }
-
-    public char getFace() {
-        switch (mValue) {
-            case 1:
-                return 'A';
-            case 10:
-                return 'T';
-            case 11:
-                return 'J';
-            case 12:
-                return 'Q';
-            case 13:
-                return 'K';
-            default:
-                return Character.forDigit(mValue, 10);
+        public char getFace() {
+            switch (mValue) {
+                case 1: return 'A';
+                case 10: return 'T';
+                case 11: return 'J';
+                case 12: return 'Q';
+                case 13: return 'K';
+                default: return Character.forDigit(mValue, 10);
+            }
         }
-    }
 
-    static Card fromString(String s) {
-        return new Card(s.charAt(0), s.charAt(1));
-    }
-
-    @Override
-    public String toString() {
-        return getFace() + "" + mSuit.toChar();
-    }
-
-    @Override
-    public int compareTo(Card o) {
-        int value = Integer.compare(mValue, o.mValue);
-        if (value == 0) {
-            value = mSuit.compareTo(o.mSuit);
+        @Override
+        public String toString() {
+            return getFace() + "" + mSuit.toChar();
         }
-        return value;
+
+        @Override
+        public int compareTo(Card o) {
+            int value = Integer.compare(mValue, o.mValue);
+            if (value == 0) {
+                value = mSuit.compareTo(o.mSuit);
+            }
+            return value;
+        }
     }
 }

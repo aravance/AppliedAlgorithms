@@ -34,24 +34,24 @@ public class Gopher extends AppliedAlgorithm {
             holes.clear();
         }
     }
-}
 
-class Location {
+    private static class Location {
 
-    private double x;
-    private double y;
+        private double x;
+        private double y;
 
-    public Location(double x, double y) {
-        this.x = x;
-        this.y = y;
-    }
+        public Location(double x, double y) {
+            this.x = x;
+            this.y = y;
+        }
 
-    public double distance(Location o) {
-        return Math.sqrt(Math.pow(x - o.x, 2) + Math.pow(y - o.y, 2));
-    }
+        public double distance(Location o) {
+            return Math.sqrt(Math.pow(x - o.x, 2) + Math.pow(y - o.y, 2));
+        }
 
-    @Override
-    public String toString() {
-        return String.format("(%.3f,%.3f)", x, y);
+        @Override
+        public String toString() {
+            return String.format("(%.3f,%.3f)", x, y);
+        }
     }
 }
