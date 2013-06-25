@@ -28,6 +28,7 @@ public abstract class AppliedAlgorithm {
             Cake.class,
             Cubes.class,
             Gopher.class,
+            Convex.class,
     };
 
     @SuppressWarnings("ConstantConditions")
