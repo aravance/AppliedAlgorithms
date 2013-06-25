@@ -50,8 +50,8 @@ public class Convex extends AppliedAlgorithm {
 
         private static class HullIterator implements Iterator<Point> {
 
-            private List<Point> mPoints;
-            private Point mFirst;
+            private final List<Point> mPoints;
+            private final Point mFirst;
             private Point mPrevious;
             private double mAngle = 0;
 

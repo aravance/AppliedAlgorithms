@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Mayan extends AppliedAlgorithm {
 
-    long fromMayan(String s) {
+    private static long fromMayan(String s) {
         long total = 0;
         try (Scanner in = new Scanner(new ByteArrayInputStream(s.getBytes()))) {
             long current = 0;
@@ -25,7 +25,7 @@ public class Mayan extends AppliedAlgorithm {
         return total;
     }
 
-    String toMayan(long n) {
+    private static String toMayan(long n) {
         boolean first = true;
         StringBuilder builder = new StringBuilder("#");
         while (first || n > 0) {

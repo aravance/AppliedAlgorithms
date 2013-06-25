@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class Schedule extends AppliedAlgorithm {
 
-    private int computeProfit(Collection<Order> orders) {
+    private static int computeProfit(Collection<Order> orders) {
         int profit = 0;
         PriorityQueue<Order> ordersByTime = new PriorityQueue<>(orders.size(), new DeadlineOrderComparator());
         PriorityQueue<Order> ordersByProfit = new PriorityQueue<>(orders.size(), new ProfitOrderComparator());
@@ -29,8 +29,7 @@ public class Schedule extends AppliedAlgorithm {
         for (int count = in.nextInt(); count != 0; count = in.nextInt()) {
             Collection<Order> orders = new ArrayList<>();
             for (int i = 0; i < count; ++i) {
-                Order order = new Order(in.nextInt(), in.nextInt(), in.nextInt());
-                orders.add(order);
+                orders.add(new Order(in.nextInt(), in.nextInt(), in.nextInt()));
             }
             out.println(computeProfit(orders));
         }
@@ -65,9 +64,9 @@ public class Schedule extends AppliedAlgorithm {
 
     private static class Order {
 
-        private int id;
-        private int deadline;
-        private int profit;
+        private final int id;
+        private final int deadline;
+        private final int profit;
 
         Order(int id, int deadline, int profit) {
             this.id = id;

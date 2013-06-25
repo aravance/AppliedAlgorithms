@@ -1,15 +1,19 @@
 package com.radadev.applied;
 
 import java.io.PrintStream;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+import java.util.Scanner;
 
 public class Pills extends AppliedAlgorithm {
 
     @Override
     protected void execute(Scanner in, PrintStream out) {
         for (int m = in.nextInt(), n = in.nextInt();
-             m != 0 && n != 0;
-             m = in.nextInt(), n = in.nextInt()) {
+                m != 0 && n != 0;
+                m = in.nextInt(), n = in.nextInt()) {
 
             Queue<Boolean> tube = new LinkedList<>();
             for (char c : in.next().toCharArray()) {

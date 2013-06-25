@@ -21,7 +21,7 @@ public class Cyclic extends AppliedAlgorithm {
         return equal;
     }
 
-    private boolean isCyclic(String number) {
+    private static boolean isCyclic(String number) {
         BigInteger big = new BigInteger(number);
         return rotationEquals(number, big.multiply(TWO).toString()) &&
                 rotationEquals(number, big.multiply(THREE).toString());

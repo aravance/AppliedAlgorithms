@@ -1,11 +1,21 @@
 package com.radadev.applied;
 
 import java.io.PrintStream;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.Set;
+import java.util.StringTokenizer;
 
 public class Pudding extends AppliedAlgorithm {
 
-    private List<String> evaluate(
+    private static List<String> evaluate(
             String result, Collection<String> conditions, Collection<String> givens,
             Collection<String> symbols, List<String> variables, Map<String, String> table, int current) {
         List<String> results = new LinkedList<>();

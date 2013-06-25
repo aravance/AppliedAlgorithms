@@ -38,7 +38,7 @@ public class Semigroup extends AppliedAlgorithm {
         return found;
     }
 
-    private String evaluateGroup(char[] set, Map<Character, Map<Character, Character>> cayley) {
+    private static String evaluateGroup(char[] set, Map<Character, Map<Character, Character>> cayley) {
 
         for (char first : set) {
             for (char second : set) {

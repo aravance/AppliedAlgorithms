@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Subvector extends AppliedAlgorithm {
 
-    private long maxsub(ArrayList<Long> array) {
+    private static long maxsub(ArrayList<Long> array) {
         long max = array.get(0);
         for (int i = 1; i < array.size(); ++i) {
             if (array.get(i - 1) > 0) array.set(i, array.get(i) + array.get(i - 1));

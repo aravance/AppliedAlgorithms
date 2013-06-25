@@ -1,11 +1,15 @@
 package com.radadev.applied;
 
 import java.io.PrintStream;
-import java.util.*;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+import java.util.Set;
 
 public class Pancakes extends AppliedAlgorithm {
 
-    private String flip(String pancakes, int c) {
+    private static String flip(String pancakes, int c) {
         char[] buffer = pancakes.toCharArray();
         for (int i = pancakes.length() - 1, j = pancakes.length() - c; j < pancakes.length(); --i, ++j) {
             char pancake = pancakes.charAt(i);
@@ -19,7 +23,7 @@ public class Pancakes extends AppliedAlgorithm {
         return new String(buffer);
     }
 
-    private boolean isSolved(String pancakes) {
+    private static boolean isSolved(String pancakes) {
         boolean solved = true;
         char last = 'A';
         for (int i = 0; solved && i < pancakes.length(); ++i) {
@@ -30,7 +34,7 @@ public class Pancakes extends AppliedAlgorithm {
         return solved;
     }
 
-    private int countFlips(String stack) {
+    private static int countFlips(String stack) {
         Set<String> visited = new HashSet<>();
         Queue<State> bfs = new LinkedList<>();
         visited.add(stack);
@@ -57,8 +61,8 @@ public class Pancakes extends AppliedAlgorithm {
 
     private static class State implements Comparable<State> {
 
-        int flips;
-        String pancakes;
+        private final int flips;
+        private final String pancakes;
 
         private State(int flips, String pancakes) {
             this.flips = flips;

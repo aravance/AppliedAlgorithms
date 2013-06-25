@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Cake extends AppliedAlgorithm {
 
-    private int getLongestIncreasingSequence(List<Integer> belt) {
+    private static int getLongestIncreasingSequence(List<Integer> belt) {
         Collections.reverse(belt);
 
         int[] lengths = new int[belt.size()];

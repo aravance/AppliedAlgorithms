@@ -41,7 +41,7 @@ public class Espanol extends AppliedAlgorithm {
             o1 = o1.replaceAll("~n", "n~");
             o2 = o2.replaceAll("~n", "n~");
             int result = 0;
-            for (int i1 = 0, i2 = 0; result == 0 && (i1 < o1.length() || i2 < o2.length()); ++i1, ++i2) {
+            for (int i1 = 0, i2 = 0; result == 0; ++i1, ++i2) {
 
                 if (i1 >= o1.length()) {
                     result = -1;

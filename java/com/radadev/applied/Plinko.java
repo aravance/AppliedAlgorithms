@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Plinko extends AppliedAlgorithm {
 
-    private int getBestPlinko(int[][] plinko) {
+    private static int getBestPlinko(int[][] plinko) {
         for (int i = plinko.length - 2; i >= 0; --i) {
             for (int j = 0; j < plinko[i].length; ++j) {
                 plinko[i][j] += Math.max(plinko[i + 1][j], plinko[i + 1][j + 1]);

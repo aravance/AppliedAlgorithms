@@ -10,7 +10,7 @@ public class Anagrams extends AppliedAlgorithm {
 
     private static final String END = "<end>";
 
-    List<Character> normalize(String s) {
+    private static List<Character> normalize(String s) {
         List<Character> result = new ArrayList<>();
         for (char c : s.toCharArray()) {
             if (Character.isAlphabetic(c)) {
@@ -21,7 +21,7 @@ public class Anagrams extends AppliedAlgorithm {
         return result;
     }
 
-    private boolean anagramic(String first, String second) {
+    private static boolean anagramic(String first, String second) {
         List<Character> f = normalize(first);
         List<Character> s = normalize(second);
         boolean success = f.size() == s.size();
@@ -34,8 +34,8 @@ public class Anagrams extends AppliedAlgorithm {
     @Override
     protected void execute(Scanner in, PrintStream out) {
         for (String first = in.nextLine(), second = in.nextLine();
-             !END.equals(first) && !END.equals(second);
-             first = in.nextLine(), second = in.nextLine()) {
+                !END.equals(first) && !END.equals(second);
+                first = in.nextLine(), second = in.nextLine()) {
             out.println(anagramic(first, second) ? "YES" : "NO");
         }
     }

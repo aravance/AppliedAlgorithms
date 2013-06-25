@@ -8,8 +8,8 @@ import java.util.Scanner;
 
 public abstract class AppliedAlgorithm {
 
-    public static final int TIME_LIMIT = 60 * 1000;
-    static Class[] ALGORITHMS = new Class[]{
+    private static final int TIME_LIMIT = 60 * 1000;
+    private static final Class[] ALGORITHMS = new Class[]{
             Surjections.class,
             Cribbage.class,
             Mayan.class,

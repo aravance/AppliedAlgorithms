@@ -45,7 +45,7 @@ public class Cubes extends AppliedAlgorithm {
         private int c;
         private int d;
 
-        CubeSet(int a, int b, int c, int d) {
+        public CubeSet(int a, int b, int c, int d) {
             this.a = a;
             this.b = b;
             this.c = c;

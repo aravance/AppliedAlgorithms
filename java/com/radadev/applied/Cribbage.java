@@ -170,8 +170,8 @@ public class Cribbage extends AppliedAlgorithm {
 
     private static class Card implements Comparable<Card> {
 
-        private Suit mSuit;
-        private int mValue;
+        private final Suit mSuit;
+        private final int mValue;
 
         public Card(char value, char suit) {
             switch (value) {
