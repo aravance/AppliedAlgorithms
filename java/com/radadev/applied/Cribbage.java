@@ -1,5 +1,7 @@
 package com.radadev.applied;
 
+import com.radadev.applied.utility.Utils;
+
 import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,24 +15,14 @@ import java.util.StringTokenizer;
 
 public class Cribbage extends AppliedAlgorithm {
 
-    @SafeVarargs
-    static <T> T[] concat(T[] array, T... others) {
-        int length = array.length + others.length;
-        T[] result = Arrays.copyOf(array, length);
-        for (int i = array.length, j = 0; i < length && j < others.length; ++i, ++j) {
-            result[i] = others[j];
-        }
-        return result;
-    }
-
-    int score(Card[] hand, Card starter) {
+    private static int score(Card[] hand, Card starter) {
         Arrays.sort(hand);
         int score = 0;
 
         if (isFlush(hand)) score += hand[0].getSuit() == starter.getSuit() ? 5 : 4;
         if (hasJack(starter.getSuit(), hand)) score += 1;
 
-        hand = concat(hand, starter);
+        hand = Utils.concat(hand, starter);
         Arrays.sort(hand);
 
         score += 2 * countPairs(hand);
@@ -42,7 +34,7 @@ public class Cribbage extends AppliedAlgorithm {
         return score;
     }
 
-    private int countStraights(int length, Card... hand) {
+    private static int countStraights(int length, Card... hand) {
 
         int count = 0;
 
@@ -83,7 +75,7 @@ public class Cribbage extends AppliedAlgorithm {
         return count;
     }
 
-    private boolean hasJack(Suit suit, Card... cards) {
+    private static boolean hasJack(Suit suit, Card... cards) {
         boolean found = false;
         for (int i = 0; !found && i < cards.length; ++i) {
             found = cards[i].getFace() == 'J' && cards[i].getSuit() == suit;
@@ -91,7 +83,7 @@ public class Cribbage extends AppliedAlgorithm {
         return found;
     }
 
-    private boolean isFlush(Card... hand) {
+    private static boolean isFlush(Card... hand) {
         boolean flush = true;
         Suit suit = hand[0].getSuit();
         for (int i = 1; flush && i < hand.length; ++i) {
@@ -100,7 +92,7 @@ public class Cribbage extends AppliedAlgorithm {
         return flush;
     }
 
-    private int sumValue(Collection<Card> cards) {
+    private static int sumValue(Collection<Card> cards) {
         int total = 0;
         for (Card card : cards) {
             total += card.getValue();
@@ -108,7 +100,7 @@ public class Cribbage extends AppliedAlgorithm {
         return total;
     }
 
-    private int countFifteens(List<Card> partial, Card... others) {
+    private static int countFifteens(List<Card> partial, Card... others) {
         if (partial == null) partial = new ArrayList<>();
         int sum = sumValue(partial);
         if (sum == 15) return 1;
@@ -122,7 +114,7 @@ public class Cribbage extends AppliedAlgorithm {
         return total;
     }
 
-    private int countPairs(Card... hand) {
+    private static int countPairs(Card... hand) {
 
         int count = 0;
 

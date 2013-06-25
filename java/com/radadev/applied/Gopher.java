@@ -1,5 +1,7 @@
 package com.radadev.applied;
 
+import com.radadev.applied.utility.Point;
+
 import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
@@ -35,23 +37,15 @@ public class Gopher extends AppliedAlgorithm {
         }
     }
 
-    private static class Location {
-
-        private double x;
-        private double y;
+    private static class Location extends Point {
 
         public Location(double x, double y) {
-            this.x = x;
-            this.y = y;
-        }
-
-        public double distance(Location o) {
-            return Math.sqrt(Math.pow(x - o.x, 2) + Math.pow(y - o.y, 2));
+            super(x, y);
         }
 
         @Override
         public String toString() {
-            return String.format("(%.3f,%.3f)", x, y);
+            return String.format("(%.3f,%.3f)", getX(), getY());
         }
     }
 }
