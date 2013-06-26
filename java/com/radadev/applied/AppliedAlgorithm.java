@@ -29,6 +29,8 @@ public abstract class AppliedAlgorithm {
             Cubes.class,
             Gopher.class,
             Convex.class,
+            // TODO: Ghosts.class
+            Led.class,
     };
 
     @SuppressWarnings("ConstantConditions")
