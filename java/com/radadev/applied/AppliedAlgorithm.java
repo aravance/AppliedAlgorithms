@@ -32,6 +32,7 @@ public abstract class AppliedAlgorithm {
             // TODO: Ghosts.class
             Led.class,
             Bowling.class,
+            Sync.class,
     };
 
     @SuppressWarnings("ConstantConditions")
