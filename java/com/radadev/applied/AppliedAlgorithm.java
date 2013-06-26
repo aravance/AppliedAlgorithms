@@ -31,6 +31,7 @@ public abstract class AppliedAlgorithm {
             Convex.class,
             // TODO: Ghosts.class
             Led.class,
+            Bowling.class,
     };
 
     @SuppressWarnings("ConstantConditions")
