@@ -11,3 +11,6 @@ data/*.out
 # IntelliJ
 .idea
 *.iml
+
+# vim
+.*.swp
