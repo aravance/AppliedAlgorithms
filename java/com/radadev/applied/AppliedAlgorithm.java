@@ -1,9 +1,9 @@
 package com.radadev.applied;
 
-import java.io.FileInputStream;
+import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.PrintStream;
+import java.net.URL;
 import java.util.Scanner;
 
 public abstract class AppliedAlgorithm {
@@ -48,8 +48,8 @@ public abstract class AppliedAlgorithm {
                 continue;
             }
 
-            try (Scanner in = new Scanner(new FileInputStream(algorithm.getInFile()));
-                 PrintStream out = new PrintStream(new FileOutputStream(algorithm.getOutFile()))) {
+            try (Scanner in = new Scanner(algorithm.getInFile());
+                 PrintStream out = new PrintStream(algorithm.getOutFile())) {
 
                 Thread t = new Thread() {
                     @Override
@@ -78,8 +78,8 @@ public abstract class AppliedAlgorithm {
 
         boolean success = true;
 
-        try (Scanner out = new Scanner(new FileInputStream(algorithm.getOutFile()));
-             Scanner expect = new Scanner(new FileInputStream(algorithm.getExpectedFile()))) {
+        try (Scanner out = new Scanner(algorithm.getOutFile());
+             Scanner expect = new Scanner(algorithm.getExpectedFile())) {
             while (success && (out.hasNextLine() || expect.hasNextLine())) {
                 success = out.hasNextLine() && expect.hasNextLine() &&
                         out.nextLine().equals(expect.nextLine());
@@ -94,16 +94,23 @@ public abstract class AppliedAlgorithm {
         return getClass().getSimpleName().toLowerCase();
     }
 
-    private String getInFile() {
-        return getFileNameBase() + ".in";
+    private File getInFile() {
+        return getFile(getFileNameBase() + ".in");
     }
 
-    private String getOutFile() {
-        return getFileNameBase() + ".out";
+    private File getOutFile() {
+        return new File("out/" + getFileNameBase() + ".out");
     }
 
-    private String getExpectedFile() {
-        return getFileNameBase() + ".expected";
+    private File getExpectedFile() {
+        return getFile(getFileNameBase() + ".expected");
+    }
+
+    private File getFile(String filename) {
+        Thread thread = Thread.currentThread();
+        ClassLoader loader = thread.getContextClassLoader();
+        URL resource = loader.getResource(filename);
+        return resource == null ? null : new File(resource.getFile());
     }
 
     abstract protected void execute(Scanner in, PrintStream out);
